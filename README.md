@@ -2,10 +2,9 @@
 
 I started a Python learning project called Mission Support Management System.
 
-It is a command-line equipment inventory tracker where I’m practicing core programming fundamentals: functions, input validation, records, menus, and Git/GitHub workflow.
+It is a command-line equipment inventory tracker where I'm practicing core programming fundamentals: functions, input validation, records, menus, and Git/GitHub workflow.
 
-I’m using this repo to document my progress over time as I keep building toward software roles in mission-focused environments.
-
+I'm using this repo to document my progress over time as I keep building toward software roles in mission-focused environments.
 
 ## How to Run
 
@@ -21,10 +20,11 @@ python msms.py
 ## Current Features
 
 Right now it supports:
-- Adding equipment 
-- Listing inventory 
-- Searching by ID
-- Validating equipment status
+
+- Adding equipment records with an ID, name, category, status, and location.
+- Listing all inventory records from the current session.
+- Searching for equipment by ID.
+- Validating equipment status against approved options.
 
 ## Current Limitations
 

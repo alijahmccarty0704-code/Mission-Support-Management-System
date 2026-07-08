@@ -1,8 +1,11 @@
 # Mission Support Management System Equipment Inventory CLI
 
-This is a Python command-line inventory tracker built as a fictional enterprise-style application for learning software development fundamentals.
+I started a Python learning project called Mission Support Management System.
 
-The program lets a user add equipment records, view the current inventory, and search for equipment by ID during a single program session.
+It is a command-line equipment inventory tracker where I’m practicing core programming fundamentals: functions, input validation, records, menus, and Git/GitHub workflow.
+
+I’m using this repo to document my progress over time as I keep building toward software roles in mission-focused environments.
+
 
 ## How to Run
 
@@ -14,3 +17,31 @@ The program lets a user add equipment records, view the current inventory, and s
 ```bash
 python msms.py
 ```
+
+## Current Features
+
+Right now it supports:
+- Adding equipment 
+- Listing inventory 
+- Searching by ID
+- Validating equipment status
+
+## Current Limitations
+
+- Equipment records are only stored during the current program session.
+- The program does not currently support editing or deleting records.
+- There are no automated tests yet.
+
+## Next Steps
+
+This project is being built over time as I continue learning Python and software development fundamentals.
+
+Planned improvements:
+
+- Add persistent storage so equipment records are saved after the program closes.
+- Add options to edit and delete existing equipment records.
+- Replace list-based equipment records with dictionaries or classes for cleaner data handling.
+- Add automated tests for the main program functions.
+- Improve command-line formatting so inventory records are easier to read.
+- Continue documenting each major improvement through Git commits.
+

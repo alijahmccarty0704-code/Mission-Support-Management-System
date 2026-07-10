@@ -43,11 +43,11 @@ def add_equipment(equipment_list):
     equipment_location = input("Enter in the equipment location: ")
 
     equipment_record = {
-        "id" : equipment_id,
-        "name" : equipment_name,
-        "category" : equipment_category,
-        "status" : equipment_status,
-        "location" : equipment_location
+        "id": equipment_id,
+        "name": equipment_name,
+        "category": equipment_category,
+        "status": equipment_status,
+        "location": equipment_location
     }
 
     equipment_list.append(equipment_record)
@@ -77,7 +77,7 @@ def find_equipment_by_id(equipment_list):
     found = False
 
     for item in equipment_list:
-        if item[0] == id_input:
+        if item["id"] == id_input:
             display_equipment(item)
             found = True
     if found == False:
@@ -111,14 +111,6 @@ def main():
             return
         else:
             print("Please select a valid option....")
-
-        
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

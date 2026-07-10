@@ -45,3 +45,6 @@ Planned improvements:
 - Improve command-line formatting so inventory records are easier to read.
 - Continue documenting each major improvement through Git commits.
 
+## Learning progress/Updates
+- Refactorted equipment records from list-based fields to dictionaries using named keys
+g

@@ -42,23 +42,23 @@ def add_equipment(equipment_list):
     equipment_status = get_valid_status()
     equipment_location = input("Enter in the equipment location: ")
 
-    equipment_record = [
-        equipment_id,
-        equipment_name,
-        equipment_category,
-        equipment_status,
-        equipment_location
-    ]
+    equipment_record = {
+        "id" : equipment_id,
+        "name" : equipment_name,
+        "category" : equipment_category,
+        "status" : equipment_status,
+        "location" : equipment_location
+    }
 
     equipment_list.append(equipment_record)
 
 
 def display_equipment(item):
-    print("ID:", item[0])
-    print("Name:", item[1])
-    print("Category:", item[2])
-    print("Status:", item[3])
-    print("Location:", item[4])
+    print("ID:", item["id"])
+    print("Name:", item["name"])
+    print("Category:", item["category"])
+    print("Status:", item["status"])
+    print("Location:", item["location"])
 
 
 def list_equipment(all_inventory):

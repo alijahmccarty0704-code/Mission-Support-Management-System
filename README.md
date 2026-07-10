@@ -47,4 +47,3 @@ Planned improvements:
 
 ## Learning progress/Updates
 - Refactorted equipment records from list-based fields to dictionaries using named keys
-g

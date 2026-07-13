@@ -1,5 +1,3 @@
-
-
 def show_menu():
     print("Mission Support Management System:\n")
     print("1. Add equipment")
@@ -16,7 +14,7 @@ def menu_input(user_input):
 
 
 def get_valid_status():
-    
+
     status_invalid = True
     while status_invalid:
         print("Available, Assigned, Maintenance, Retired")
@@ -34,9 +32,19 @@ def get_valid_status():
             continue
 
 
+def equipment_id_exists(equipment_list, equipment_id):
+    for item in equipment_list:
+        if item["id"] == equipment_id:
+            return True
+    return False
+
+
 def add_equipment(equipment_list):
 
     equipment_id = input("Enter in the equipment ID: ")
+    if equipment_id_exists(equipment_list, equipment_id):
+        print("Duplicate ID")
+        return
     equipment_name = input("Enter in the equipment name: ")
     equipment_category = input("Enter in the equipment category: ")
     equipment_status = get_valid_status()
@@ -51,6 +59,7 @@ def add_equipment(equipment_list):
     }
 
     equipment_list.append(equipment_record)
+    print("Equipment Added")
 
 
 def display_equipment(item):
@@ -73,7 +82,6 @@ def list_equipment(all_inventory):
 
 def find_equipment_by_id(equipment_list):
     id_input = input("Equipment ID:")
-
     found = False
 
     for item in equipment_list:
@@ -98,14 +106,11 @@ def main():
 
         if menu_selection_input == 1:
             print("Add Equipment: \n")
-
             add_equipment(equipment_inventory)
-
-            print("Equipment Added")
         elif menu_selection_input == 2:
             list_equipment(equipment_inventory)
         elif menu_selection_input == 3:
-            find_equipment_by_id(equipment_inventory)    
+            find_equipment_by_id(equipment_inventory)
         elif menu_selection_input == 4:
             print("Goodbye.")
             return

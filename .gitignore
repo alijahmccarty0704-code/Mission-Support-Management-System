@@ -2,12 +2,15 @@
 __pycache__/
 *.pyc
 
-#Virtual environments
+# Virtual environments
 .venv/
 venv/
 
-#Environment variables and local secrets
+# Environment variables and local secrets
 .env
 
-#macOS system files
+# macOS system files
 .DS_Store
+
+# Inventory Report Text File
+inventory_report.txt

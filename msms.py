@@ -3,7 +3,8 @@ def show_menu():
     print("1. Add equipment")
     print("2. List Equipment")
     print("3. Find Equipment by ID")
-    print("4. Exit")
+    print("4. Export Inventory Report")
+    print("5. Exit")
 
 
 def menu_input(user_input):
@@ -92,6 +93,24 @@ def find_equipment_by_id(equipment_list):
         print("Equipment ID not found")
 
 
+def inventory_export_report(equipment_list):
+
+    if equipment_list == []:
+        print("No inventory to export.")
+    else:
+        with open("inventory_report.txt", "w") as file:
+            file.write("Mission Support Management System\n")
+            for item in equipment_list:
+                file.write("ID: " + item["id"] + "\n")
+                file.write("Name: " + item["name"] + "\n")
+                file.write("Category: " + item["category"] + "\n")
+                file.write("Status: " + item["status"] + "\n")
+                file.write("Location: " + item["location"] + "\n")
+                file.write("\n")
+            file.write("Inventory count: " + str(len(equipment_list)) + "\n")
+            print("Inventory report exported.")
+
+
 def main():
     main_menu = True
 
@@ -112,7 +131,10 @@ def main():
         elif menu_selection_input == 3:
             find_equipment_by_id(equipment_inventory)
         elif menu_selection_input == 4:
-            print("Goodbye.")
+            print("Exporting inventory report...")
+            inventory_export_report(equipment_inventory)
+        elif menu_selection_input == 5:
+            print("Goodbye!")
             return
         else:
             print("Please select a valid option....")

@@ -25,12 +25,15 @@ Right now it supports:
 - Listing all inventory records from the current session.
 - Searching for equipment by ID.
 - Validating equipment status against approved options.
+- Preventing duplicate equipment IDs.
+- Allows exporting the current inventory to a text report.
 
 ## Current Limitations
 
 - Equipment records are only stored during the current program session.
 - The program does not currently support editing or deleting records.
 - There are no automated tests yet.
+- Exported inventory reports are generated as local text files and are not committed to the repository.
 
 ## Next Steps
 
@@ -44,6 +47,7 @@ Planned improvements:
 - Add automated tests for the main program functions.
 - Improve command-line formatting so inventory records are easier to read.
 - Continue documenting each major improvement through Git commits.
+- Add JSON-based persistent storage so equipment records can be saved and loaded between sessions.
 
 ## Learning progress/Updates
 - Refactorted equipment records from list-based fields to dictionaries using named keys

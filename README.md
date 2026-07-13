@@ -51,3 +51,4 @@ Planned improvements:
 
 ## Learning progress/Updates
 - Refactorted equipment records from list-based fields to dictionaries using named keys
+- Added a feature to allow exporting of the current inventory into a local text report.

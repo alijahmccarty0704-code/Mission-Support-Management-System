@@ -27,13 +27,13 @@ Right now it supports:
 - Validating equipment status against approved options.
 - Preventing duplicate equipment IDs.
 - Allows exporting the current inventory to a text report.
+- Saving and loading equipment records with local JSON persistence.
 
 ## Current Limitations
 
-- Equipment records are only stored during the current program session.
 - The program does not currently support editing or deleting records.
 - There are no automated tests yet.
-- Exported inventory reports are generated as local text files and are not committed to the repository.
+- Local JSON data and exported reports are not committed to the repository.
 
 ## Next Steps
 
@@ -41,14 +41,13 @@ This project is being built over time as I continue learning Python and software
 
 Planned improvements:
 
-- Add persistent storage so equipment records are saved after the program closes.
 - Add options to edit and delete existing equipment records.
-- Replace list-based equipment records with dictionaries or classes for cleaner data handling.
+- Refactor equipment records into classes when object-oriented programming is introduced.
 - Add automated tests for the main program functions.
 - Improve command-line formatting so inventory records are easier to read.
 - Continue documenting each major improvement through Git commits.
-- Add JSON-based persistent storage so equipment records can be saved and loaded between sessions.
 
 ## Learning progress/Updates
-- Refactorted equipment records from list-based fields to dictionaries using named keys
+- Refactored equipment records from list-based fields to dictionaries using named keys
 - Added a feature to allow exporting of the current inventory into a local text report.
+- Added basic JSON persistence so equipment records can be saved and loaded between sessions.

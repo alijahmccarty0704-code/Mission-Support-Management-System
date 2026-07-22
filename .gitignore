@@ -14,3 +14,6 @@ venv/
 
 # Inventory Report Text File
 inventory_report.txt
+
+# Persistent JSON File
+equipment_inventory.json

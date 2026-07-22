@@ -1,3 +1,5 @@
+import json
+
 def show_menu():
     print("Mission Support Management System:\n")
     print("1. Add equipment")
@@ -61,6 +63,18 @@ def add_equipment(equipment_list):
 
     equipment_list.append(equipment_record)
     print("Equipment Added")
+    save_inventory(equipment_list)
+
+
+def save_inventory(equipment_list):
+    with open("equipment_inventory.json", "w") as file:
+        json.dump(equipment_list, file)
+
+
+def load_inventory():
+    with open("equipment_inventory.json", "r") as file:
+        contents = json.load(file)
+        return contents
 
 
 def display_equipment(item):
@@ -114,7 +128,7 @@ def inventory_export_report(equipment_list):
 def main():
     main_menu = True
 
-    equipment_inventory = []
+    equipment_inventory = load_inventory()
 
     while main_menu:
         show_menu()

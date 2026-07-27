@@ -72,9 +72,12 @@ def save_inventory(equipment_list):
 
 
 def load_inventory():
-    with open("equipment_inventory.json", "r") as file:
-        contents = json.load(file)
-        return contents
+    try:
+        with open("equipment_inventory.json", "r") as file:
+            contents = json.load(file)
+            return contents
+    except FileNotFoundError:
+        return []
 
 
 def display_equipment(item):

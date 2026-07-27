@@ -76,7 +76,12 @@ def load_inventory():
         with open("equipment_inventory.json", "r") as file:
             contents = json.load(file)
             return contents
+
     except FileNotFoundError:
+        return []
+
+    except json.JSONDecodeError:
+        print("Inventory file could not be loaded. Starting with an empty inventory.\n")
         return []
 
 

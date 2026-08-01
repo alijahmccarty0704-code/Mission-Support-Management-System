@@ -26,4 +26,5 @@ class TestMsms(unittest.TestCase):
 
         self.assertFalse(empty_inventory)
 
-        
+
+    

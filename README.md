@@ -17,6 +17,14 @@ I'm using this repo to document my progress over time as I keep building toward 
 python msms.py
 ```
 
+## How to Run Tests
+
+Run the automated tests with:
+
+```bash
+python3 -m unittest -v
+```
+
 ## Current Features
 
 Right now it supports:
@@ -28,11 +36,12 @@ Right now it supports:
 - Preventing duplicate equipment IDs.
 - Allows exporting the current inventory to a text report.
 - Saving and loading equipment records with local JSON persistence.
+- Basic automated tests for equipment ID lookup behavior.
 
 ## Current Limitations
 
 - The program does not currently support editing or deleting records.
-- There are no automated tests yet.
+- Test coverage is currently limited to equipment ID lookup behavior.
 - Local JSON data and exported reports are not committed to the repository.
 
 ## Next Steps
@@ -43,7 +52,7 @@ Planned improvements:
 
 - Add options to edit and delete existing equipment records.
 - Refactor equipment records into classes when object-oriented programming is introduced.
-- Add automated tests for the main program functions.
+- Expand automated test coverage for JSON loading, saving, and export behavior.
 - Improve command-line formatting so inventory records are easier to read.
 - Continue documenting each major improvement through Git commits.
 
@@ -51,3 +60,4 @@ Planned improvements:
 - Refactored equipment records from list-based fields to dictionaries using named keys
 - Added a feature to allow exporting of the current inventory into a local text report.
 - Added basic JSON persistence so equipment records can be saved and loaded between sessions.
+- Added initial automated tests using Python's built-in unittest module.
